@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "cosui",
+    "namespace": "cosui.tc",
+    "platform": "Application Router @ Cloud Foundry",
+    "viewtype": "XML",
+    "viewname": "App",
+    "ui5libs": "Content delivery network (SAPUI5)",
+    "newdir": false,
+    "namespaceURI": "cosui/tc",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
