@@ -1,7 +1,7 @@
 sap.ui.define([
-  "cosui/tc/cosui/controller/BaseController"
+  "cosapp/tc/cosapp/controller/BaseController"
 ], function(Controller) {
   "use strict";
 
-  return Controller.extend("cosui.tc.cosui.controller.App", {});
+  return Controller.extend("cosapp.tc.cosapp.controller.App", {});
 });

@@ -10,16 +10,6 @@
       "target": "$1",
       "authenticationType": "xsuaa",
       "localDir": "uimodule/webapp"
-    },
-    {
-      "source": "^/availabilityRawData",
-      "authenticationType": "xsuaa",
-      "destination": "COS3"
-    },
-    {
-      "source": "^/api/inventory",
-      "authenticationType": "xsuaa",
-      "destination": "INVEN"
     }
   ]
 }

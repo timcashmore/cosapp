@@ -1,0 +1,344 @@
+{
+    "items": [
+      {
+        "productId": "1099285",
+        "description": "Monopod 100 - Floor Standing Monopod",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399234Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399235Z",
+            "quantity": 0
+          }
+        ],
+        "source": {
+          "sourceId": "soho_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "784343",
+        "description": "EF 200mm f/2.8L II USM",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399227Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399227Z",
+            "quantity": 20
+          }
+        ],
+        "source": {
+          "sourceId": "birmingham_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "2053367",
+        "description": "OS 500D + EF-S 18-200mm f/3.5-5.6 IS, kit",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399229Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399229Z",
+            "quantity": 50
+          }
+        ],
+        "source": {
+          "sourceId": "reading_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "1099285",
+        "description": "Monopod 100 - Floor Standing Monopod",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399228Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399229Z",
+            "quantity": 50
+          }
+        ],
+        "source": {
+          "sourceId": "birmingham_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "1099285",
+        "description": "Monopod 100 - Floor Standing Monopod",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399231Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399232Z",
+            "quantity": 20
+          }
+        ],
+        "source": {
+          "sourceId": "reading_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "784343",
+        "description": "EF 200mm f/2.8L II USM",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399236Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399236Z",
+            "quantity": 2
+          }
+        ],
+        "source": {
+          "sourceId": "shoreditch_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "black_sports_shoe",
+        "description": "Sports Black Air Trainer",
+        "catalog": "Sports Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-01-01T21:54:30Z",
+        "items": [
+          {
+            "availableFrom": "2020-01-01T00:00:00Z",
+            "quantity": 5
+          }
+        ],
+        "source": {
+          "sourceId": "Hamburg",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "2053367",
+        "description": "OS 500D + EF-S 18-200mm f/3.5-5.6 IS, kit",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399224Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399226Z",
+            "quantity": 20
+          }
+        ],
+        "source": {
+          "sourceId": "birmingham_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "black_sports_shoe",
+        "description": "Sports Black Air Trainer",
+        "catalog": "Sports Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2019-09-24T21:54:30Z",
+        "items": [
+          {
+            "availableFrom": "2020-01-01T00:00:00Z",
+            "quantity": 13
+          }
+        ],
+        "source": {
+          "sourceId": "Munich",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "768108",
+        "description": "DTC-1000 Component Cable",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399227Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399228Z",
+            "quantity": 0
+          }
+        ],
+        "source": {
+          "sourceId": "birmingham_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "768108",
+        "description": "DTC-1000 Component Cable",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399236Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399237Z",
+            "quantity": 0
+          }
+        ],
+        "source": {
+          "sourceId": "shoreditch_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "1099285",
+        "description": "Monopod 100 - Floor Standing Monopod",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399237Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399237Z",
+            "quantity": 10
+          }
+        ],
+        "source": {
+          "sourceId": "shoreditch_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "black_sports_shoe",
+        "description": "Sports Black Air Trainer",
+        "catalog": "Sports Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-01-01T21:54:30Z",
+        "items": [
+          {
+            "availableFrom": "2020-01-01T00:00:00Z",
+            "quantity": 1
+          }
+        ],
+        "source": {
+          "sourceId": "Berlin",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "2053367",
+        "description": "OS 500D + EF-S 18-200mm f/3.5-5.6 IS, kit",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399232Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399232Z",
+            "quantity": 4
+          }
+        ],
+        "source": {
+          "sourceId": "soho_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "black_sports_shoe",
+        "description": "Sports Black Air Trainer",
+        "catalog": "Sports Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-01-01T21:54:30Z",
+        "items": [
+          {
+            "availableFrom": "2020-01-01T00:00:00Z",
+            "quantity": 1
+          }
+        ],
+        "source": {
+          "sourceId": "Frankfurt",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "784343",
+        "description": "EF 200mm f/2.8L II USM",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399233Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399233Z",
+            "quantity": 3
+          }
+        ],
+        "source": {
+          "sourceId": "soho_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "2053367",
+        "description": "OS 500D + EF-S 18-200mm f/3.5-5.6 IS, kit",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399235Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399235Z",
+            "quantity": 5
+          }
+        ],
+        "source": {
+          "sourceId": "shoreditch_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "768108",
+        "description": "DTC-1000 Component Cable",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399231Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399231Z",
+            "quantity": 50
+          }
+        ],
+        "source": {
+          "sourceId": "reading_dc",
+          "sourceType": "DC"
+        }
+      },
+      {
+        "productId": "768108",
+        "description": "DTC-1000 Component Cable",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399234Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399234Z",
+            "quantity": 10
+          }
+        ],
+        "source": {
+          "sourceId": "soho_london_store",
+          "sourceType": "STORE"
+        }
+      },
+      {
+        "productId": "784343",
+        "description": "EF 200mm f/2.8L II USM",
+        "catalog": "Electronics Product Catalog ",
+        "unit": "C62",
+        "calculatedAt": "2020-11-08T13:00:02.399230Z",
+        "items": [
+          {
+            "availableFrom": "2020-11-08T13:00:02.399230Z",
+            "quantity": 50
+          }
+        ],
+        "source": {
+          "sourceId": "reading_dc",
+          "sourceType": "DC"
+        }
+      }
+    ]
+  }

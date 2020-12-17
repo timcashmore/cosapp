@@ -1,7 +1,7 @@
 {
   "_version": "1.21.0",
   "sap.app": {
-    "id": "cosui.tc.cosui",
+    "id": "cosapp.tc.cosapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -28,7 +28,7 @@
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "cosui.tc.cosui.view.App",
+      "viewName": "cosapp.tc.cosapp.view.App",
       "type": "XML",
       "async": true,
       "id": "idAppControl"
@@ -49,7 +49,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "cosui.tc.cosui.i18n.i18n"
+          "bundleName": "cosapp.tc.cosapp.i18n.i18n"
         }
       }
     },
@@ -64,7 +64,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "cosui.tc.cosui.view",
+        "viewPath": "cosapp.tc.cosapp.view",
         "controlId": "idAppControl",
         "controlAggregation": "pages",
         "async": true

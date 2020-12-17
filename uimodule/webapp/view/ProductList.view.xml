@@ -1,0 +1,121 @@
+<mvc:View
+	controllerName="cosapp.tc.cosapp.controller.ProductList"
+	xmlns:m="sap.m"
+	xmlns:t="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<t:Table
+		id="table"
+		rows="{product>/items}"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		selectionMode="None"				
+		visibleRowCount="{ui>/visibleRowCount}"
+		paste="onPaste"
+		alternateRowColors="true"
+		ariaLabelledBy="title">
+		<t:extension>
+			<m:OverflowToolbar>
+					<m:Title id="title" text="{i18n>tableTitle}"/>
+					<m:ToolbarSpacer/>
+						<m:Button
+							id="save"
+							text="{i18n>SelectUpdated}"
+							tooltip="{i18n>SelectUpdatedToolTip}"
+							press="save"/>
+						<m:Button
+							id="ascending"
+							icon="sap-icon://sort-ascending"
+							tooltip="{i18n>SortToolTipA}"
+							press="sortCombination"/>
+						<m:Button
+							id="descending"
+							icon="sap-icon://sort-descending"
+							tooltip="{i18n>SortToolTipD}"
+							press="sortCombination"/>
+						<m:Button
+							id="reset"
+							icon="sap-icon://decline"
+							tooltip="{i18n>ResetToolTip}"
+							press="resetFiltersAndSorts"/>   
+						<m:ToolbarSeparator/>
+						<m:SearchField
+							placeholder="Filter"
+							value="{ui>/globalFilter}"
+							search="filterGlobally"
+							tooltip="{i18n>FilterToolTip}"
+							width="15rem"/>
+			</m:OverflowToolbar>
+		</t:extension>
+	  	<t:columns>
+				<t:Column 
+					id="catalog"
+					showSortMenuEntry="true"
+					filterProperty="catalog"
+					sortProperty="catalog">
+					<m:Label text="{i18n>columnCatalog}"/>
+						<t:template>
+							<m:Text text="{product>catalog}" wrapping="false" />
+						</t:template>
+				</t:Column>
+				<t:Column 
+					id="sourceId"
+					showSortMenuEntry="true"
+					filterProperty="source/sourceId"
+					sortProperty="source/sourceId">
+					<m:Label text="{i18n>columnSourceId}"/>
+						<t:template>
+							<m:Text text="{product>source/sourceId}" wrapping="false" />
+						</t:template>
+				</t:Column>
+				<t:Column 
+					id="productId"
+					showSortMenuEntry="true"
+					filterProperty="productId"
+					sortProperty="productId">
+					<m:Label text="{i18n>columnProductId}"/>
+						<t:template>
+							<m:Text text="{product>productId}" wrapping="false">
+							</m:Text>
+						</t:template> 
+				</t:Column>
+				<t:Column 
+					id="description"
+					showSortMenuEntry="true"
+					filterProperty="description"
+					sortProperty="description">
+					<m:Label text="{i18n>columnDescription}"/>
+						<t:template>
+							<m:Text text="{product>description}" wrapping="false" />
+						</t:template>
+				</t:Column>
+				<t:Column width="10rem">
+						<m:Label text="{i18n>columnIQuantity}" />
+						<t:template>
+							<m:Input 
+								id="iQuantity"
+								change="inputChange"
+								type="Number"
+								value="{
+									path: 'product>items/0/iQuantity',
+									type: 'sap.ui.model.type.Integer'}" 
+								editable="{input>update}"/>
+						</t:template>
+				</t:Column>
+				<t:Column width="6rem">
+						<m:Label text="{i18n>columnQuantity}" />
+						<t:template>
+							<m:Text text="{product>items/0/oldQuantity}"
+							class="myCustomText"/>
+						</t:template>
+				</t:Column>
+				<t:Column 
+					id="updated"
+					width="4rem"
+					showSortMenuEntry="false"
+					filterProperty="updated"
+					sortProperty="updated">
+				</t:Column>
+		</t:columns>
+	</t:Table>
+</mvc:View>

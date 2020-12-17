@@ -1,1 +1,7 @@
 /* Enter your custom styles here */
+.myCustomText {
+	display: inline-block;
+	font-weight: bold;
+	color: rgb(231, 24, 24)
+}
+

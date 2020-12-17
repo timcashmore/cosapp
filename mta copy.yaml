@@ -1,6 +1,6 @@
 ID: cosapp
 _schema-version: 3.2.0
-version: 0.0.2
+version: 0.0.1
 parameters:
   enable-parallel-deployments: true
 modules:
@@ -13,11 +13,6 @@ modules:
     requires:
       - name: cosapp_destination
       - name: uaa_cosapp
-        group: destinations
-        properties:
-          name: INVEN
-          forwardAuthToken: true
-          url: https://cosapi-tc060765.cfapps.eu10.hana.ondemand.com
     build-parameters:
       builder: custom
       commands:
@@ -30,9 +25,9 @@ resources:
       service-plan: lite
       service: destination
   - name: uaa_cosapp
-    type: org.cloudfoundry.existing-service
+    type: org.cloudfoundry.managed-service
     parameters:
       path: ./xs-security.json
-      service-name: xsuaa-service-tutorial
       service: xsuaa
+      service-name: xsuaa-service-cosapp
       service-plan: application

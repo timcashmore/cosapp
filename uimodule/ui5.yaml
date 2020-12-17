@@ -1,6 +1,6 @@
 specVersion: "2.2"
 metadata:
-  name: cosui_uimodule
+  name: cosapp_uimodule
 type: application
 resources:
   configuration:
@@ -27,7 +27,11 @@ server:
         debug: true
         port: 1091
         xsappJson: approuter/xs-app.json
-        destinations: []
+        destinations: 
+           - name: "COS3"
+             url: "https://approuter2-cosapi-tc060765.cfapps.eu10.hana.ondemand.com/"
+           - name: "INVEN"
+             url: "https://approuter2-cosapi-tc060765.cfapps.eu10.hana.ondemand.com/"
 builder:
   customTasks:
     -  name: "ui5-task-zipper"
