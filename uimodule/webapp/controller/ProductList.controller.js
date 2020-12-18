@@ -8,8 +8,10 @@ sap.ui.define([
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator",
     "sap/ui/table/library",
-	"sap/ui/thirdparty/jquery"
-], function(Log, Controller, Sorter, JSONModel, DateFormat, ToolbarSpacer, Filter, FilterOperator, library, jquery) {
+	"sap/ui/thirdparty/jquery",
+	"sap/m/MessageBox",
+	"sap/m/MessageToast"
+], function(Log, Controller, Sorter, JSONModel, DateFormat, ToolbarSpacer, Filter, FilterOperator, library, jquery, MessageBox, MessageToast) {
     "use strict";
     
 	var oSort = library.SortOrder;
@@ -117,7 +119,90 @@ sap.ui.define([
 			return bAvailable ? "Success" : "Error";
 		},
 
-		save: function(oEvent) {	
+		onSavePress: function(oEvent) {
+			this.showUpdated(oEvent);
+			MessageBox.confirm("Save all updates ?", { onClose: oAction => {
+					if (oAction == "OK" ) {
+						this.updateValues(oAction); 
+					} else {
+						MessageToast.show("Update Cancelled");
+					}	
+				} 
+			});
+		},
+
+		updateValues: function(oAction) {
+			var oModel = this.getView().getModel("product");
+			// Identify updated items and prepare to send update back to COS in correct POST format
+			var filterValues = oModel.oData.items.filter( item => item.updated == "U" );
+			//Need to make a deep copy as updates remove original properties
+			//var updatedInventoryValues = $.extend( true, {}, filter );
+			var updatedInventoryValues = JSON.parse(JSON.stringify(filterValues));
+			updatedInventoryValues.forEach( item => {
+				delete item.description;
+				delete item.catalog;
+				delete item.updated;
+				item.items[0].quantity = item.items[0].iQuantity
+				delete item.items[0].iQuantity;
+				delete item.items[0].oldQuantity;
+			} );
+			console.log("items= " + oModel.oData.items.length);
+//			console.log(new Date().toISOString());
+			console.log("updated= " + updatedInventoryValues.length);
+			//Post the data and wait
+			this._postInventory(JSON.stringify(updatedInventoryValues));
+		},
+
+		_postInventory: function (updatedInventoryJSON) {
+			console.log("in Post Inventory" + updatedInventoryJSON);
+			// Need to get xrsf token first
+			$.ajax({
+				url: '/availabilityRawData',
+				type: 'GET',
+				dataType: 'json',
+				async: false,
+				contentType: 'application/json',
+				beforeSend: function(xhr) {
+					xhr.setRequestHeader('X-CSRF-Token', 'fetch');
+				},
+				complete: function(response) {
+					console.log("Iin token get "+ response);
+					jQuery.ajaxSetup({
+						beforeSend: function(xhr) {
+						  xhr.setRequestHeader("X-CSRF-Token",response.getResponseHeader('X-CSRF-Token'));
+						}
+					  });
+				},
+				error: function(error) {
+					console.log("Error on Token Fetch: "+ error);
+				}
+			  });
+			
+			var success = false;
+			$.ajax({
+				url: '/availabilityRawData',
+				type: 'POST',
+				data: updatedInventoryJSON,
+//				dataType: 'json',
+				async: false,
+//				data: $.param(updatedInventoryJSON),
+//				contentType: 'application/x-www-form-urlencoded',
+				contentType: 'application/json',
+				success: function(data) {
+					console.log("InventoryData Updated: "+ data);
+					MessageToast.show(`Update Completed`);
+					success = true;
+				},
+				error: function(e) {
+					console.log("Error on Inventory Update: "+ e);
+					MessageToast.show(`Update Failed`);
+				}
+			  });
+			  // Need to call function outside of Ajax call to refresh data
+			  if (success) { this.initDataModel(); }
+		},
+
+		showUpdated: function(oEvent) {	
 			//Keep sort but reest filter to select only the updated items
 			this._oGlobalFilter = null;
 			this._oGlobalFilter = new Filter([
@@ -144,6 +229,7 @@ sap.ui.define([
 
 
 		initDataModel : function() {
+			console.log("in initDataModel");
 			var oProductModel = new JSONModel();
 			// Set promise to update the data
 //			var oPromise = oProductModel.loadData("./TestData/Products.json");
@@ -161,7 +247,7 @@ sap.ui.define([
 					console.Log.error("failed to load json availability raw data");
 				}
 			}); */
-			//Promise Only required if want to make some updates to the data
+			//Promise: Only required if want to make some updates to the data
 			oPromise.then( () => {
 				//Now add in an additional field as the input
 				var oLen = oProductModel.getData().items.length;
@@ -179,7 +265,7 @@ sap.ui.define([
 			//Set the data models to be used by the views
 			var oUiModel = new JSONModel({
 				globalFilter: "",
-				visibleRowCount: 25,
+				visibleRowCount: 20,
 				changedClass: ".myCustomText",
 			});
 			this.getView().setModel(oUiModel,"ui"); 

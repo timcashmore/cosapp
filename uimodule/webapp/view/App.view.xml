@@ -2,7 +2,8 @@
   displayBlock="true"
   xmlns="sap.m"
   xmlns:mvc="sap.ui.core.mvc">
-  <App id="idAppControl" >
+  <Shell>
+    <App id="idAppControl" >
     <pages>
       <Page title="{i18n>title}">
         <content>
@@ -11,4 +12,5 @@
       </Page>
     </pages>
   </App>
+</Shell>
 </mvc:View>

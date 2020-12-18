@@ -20,9 +20,14 @@
 					<m:ToolbarSpacer/>
 						<m:Button
 							id="save"
+							text="{i18n>InventorySave}"
+							tooltip="{i18n>InventorySaveToolTip}"
+							press="onSavePress"/>
+						<m:Button
+							id="showUpdated"
 							text="{i18n>SelectUpdated}"
 							tooltip="{i18n>SelectUpdatedToolTip}"
-							press="save"/>
+							press="showUpdated"/>
 						<m:Button
 							id="ascending"
 							icon="sap-icon://sort-ascending"
